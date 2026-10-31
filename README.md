@@ -46,8 +46,12 @@ Marcus could use the same planner with a different deterministic policy: filter 
 - `src/mock-model.js` — labeled local model and exact call logging.
 - `public/` — responsive user flow and browser-local advisor note.
 - `test/pathways.test.js` — five automated trust and behavior checks.
+- `EVALUATION.md` — release gates, adversarial cases, pilot metrics, and outcome decisions.
+- `PRODUCTION_READINESS.md` — architecture, privacy, identity, observability, and the first 90 days.
 - `VIDEO_OUTLINE.md` — timed walkthrough guide.
 
 ## Production path
 
 At roughly 100,000 users, put authenticated APIs behind a gateway, store plans in encrypted tenant-scoped storage, separate minor PII from AI services, tokenize identifiers, enforce retention/deletion policies, and send only allowlisted, versioned context through a model gateway with audit logs and redaction alarms. Keep deterministic eligibility/status rules server-side, require human review for unknowns, version source records, monitor grounding and escalation rates, and test policy changes against a fixed evaluation set before rollout.
+
+See `EVALUATION.md` for concrete release gates and pilot-outcome measures, and `PRODUCTION_READINESS.md` for the state-scale architecture and operating model.

@@ -34,6 +34,7 @@ Only use this account after personally reviewing and agreeing with that design d
 - Separate minor PII from model services; use allowlisted structured context, tokenized IDs, retention limits, audit logs, and redaction alarms.
 - Keep eligibility and status decisions deterministic and versioned. Models can explain evidence but cannot invent or approve outcomes.
 - Run a fixed grounding/privacy evaluation suite before model, prompt, or policy releases.
+- Explain the release rule from `EVALUATION.md`: privacy or grounding failures always block release, while pilot expansion requires improved verified-next-step outcomes.
 
 ## 7:15–9:15 — Why CampusEvolve and first 90 days
 
