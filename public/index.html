@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#173f35">
+    <title>Pathways — Dani's next step</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Pathways home">Pathways<span>•</span></a>
+      <span class="demo-label">Fictional demo</span>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">Your next step, made clearer</p>
+        <h1>Build a hands-on plan before winter break.</h1>
+        <p>Compare two paths, see what is known, and take one concrete action without guessing about eligibility.</p>
+        <button id="start-button" class="primary">Show my next step</button>
+      </section>
+
+      <section id="plan" class="plan" hidden aria-live="polite">
+        <div class="progress"><span></span><span></span><span></span></div>
+        <p class="eyebrow">Step 1 of 3 · Compare</p>
+        <h2 id="plan-heading"></h2>
+        <div id="comparison" class="comparison"></div>
+
+        <div class="recommendation">
+          <p class="eyebrow">Recommended next action</p>
+          <h2 id="recommendation-title"></h2>
+          <p id="recommendation-rationale"></p>
+          <p id="recommendation-source" class="source"></p>
+        </div>
+
+        <div class="truth-card">
+          <h3>What Pathways cannot confirm</h3>
+          <ul id="unknowns"></ul>
+          <p class="source">Advisor source: ADV-01 · Last checked: n/a</p>
+        </div>
+
+        <div class="checklist-card">
+          <p class="eyebrow">Step 2 of 3 · Prepare</p>
+          <h3>Your checklist</h3>
+          <ol id="checklist"></ol>
+        </div>
+
+        <button id="explain-button" class="secondary">Explain the comparison</button>
+        <div id="model-explanation" class="model-card" hidden></div>
+
+        <div class="advisor-card">
+          <p class="eyebrow">Step 3 of 3 · Ask a person</p>
+          <h3>Prepare an advisor handoff</h3>
+          <p id="handoff-message"></p>
+          <label for="advisor-note">Private note for my advisor</label>
+          <textarea id="advisor-note" rows="4" placeholder="Stored only in this browser. Never sent to the model."></textarea>
+          <p class="privacy-note">🔒 This note stays on this device in the demo.</p>
+          <button id="save-button" class="primary">Save my next-step plan</button>
+          <p id="save-status" class="save-status" role="status"></p>
+        </div>
+        <p id="disclaimer" class="disclaimer"></p>
+      </section>
+    </main>
+    <footer>Pathways proof of concept · Synthetic records only</footer>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
